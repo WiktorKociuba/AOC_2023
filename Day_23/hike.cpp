@@ -17,18 +17,6 @@ void znajdz(pair<int,int> pozycja, int wynik,int kierunek){
         wynik_koc = max(wynik,wynik_koc);
         return;
     }
-    /*if(mapa[pozycja.first+1][pozycja.second] == '.' || mapa[pozycja.first+1][pozycja.second] == 'v'){
-        znajdz(make_pair(pozycja.first+1,pozycja.second),wynik+1,1);
-    }
-    if(mapa[pozycja.first-1][pozycja.second] == '.' || mapa[pozycja.first-1][pozycja.second] == '^'){
-        znajdz(make_pair(pozycja.first-1,pozycja.second),wynik+1,2);
-    }
-    if(mapa[pozycja.first][pozycja.second-1] == '.' || mapa[pozycja.first][pozycja.second-1] == '<'){
-        znajdz(make_pair(pozycja.first,pozycja.second-1),wynik+1,3);
-    }
-    if(mapa[pozycja.first][pozycja.second+1] == '.' || mapa[pozycja.first][pozycja.second+1] == '>'){
-        znajdz(make_pair(pozycja.first,pozycja.second+1),wynik+1,4);
-    }*/
     if(kierunek == 1){
         if(mapa[pozycja.first+1][pozycja.second] == '.' || mapa[pozycja.first+1][pozycja.second] == 'v'){
             znajdz(make_pair(pozycja.first+1,pozycja.second),wynik+1,1);
@@ -89,6 +77,6 @@ int main(){
             break;
         }
     }
-    znajdz(start,0,1);//mozliwe ze wynik na 1 trzeba ustawic
+    znajdz(start,0,1);
     cout << wynik_koc;
 } 
